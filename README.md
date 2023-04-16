@@ -1,13 +1,14 @@
 # What is this
 
-This is a demo of a 'task manager'.
+This is a demo of a 'task manager'. <br/>
+This hackathon project was made for the problem statement of: 'Decrease procrastination in the work force'<br/>
 It's work done by Group 9 of coding.bn hackaton 2023 which consists of:
 
-https://github.com/HajiMuhammadHafidzuddinHajiUmar
-https://github.com/SaifuddinJumin
-https://github.com/MuizzKasim
-https://github.com/n3r052
-https://github.com/zabidman
+https://github.com/HajiMuhammadHafidzuddinHajiUmar <br/>
+https://github.com/SaifuddinJumin <br/>
+https://github.com/MuizzKasim <br/>
+https://github.com/n3r052 <br/>
+https://github.com/zabidman <br/>
 
 <!--  -->
 
