@@ -8,25 +8,25 @@ const project_table='project_status'
 const connection = db.connection;
 let sql;
 
-//Create table - if not exists
-sql = `CREATE TABLE IF NOT EXISTS ${table_name} (
-    tid INTEGER PRIMARY KEY AUTO_INCREMENT,
-    task_name VARCHAR(50),
-    status ENUM ('complete','pending','cancel') DEFAULT 'pending',
-    description VARCHAR(200),
-    file VARCHAR(50),
-    roleid INTEGER, 
-    uid INTEGER, 
-    pid INTEGER,
-    FOREIGN KEY (roleid) REFERENCES ${role_table}(roleid),
-    FOREIGN KEY (uid) REFERENCES ${user_table}(uid),
-    FOREIGN KEY (pid) REFERENCES ${project_table}(pid)
-    )`
+// //Create table - if not exists
+// sql = `CREATE TABLE IF NOT EXISTS ${table_name} (
+//     tid INTEGER PRIMARY KEY AUTO_INCREMENT,
+//     task_name VARCHAR(50),
+//     status ENUM ('complete','pending','cancel') DEFAULT 'pending',
+//     description VARCHAR(200),
+//     file VARCHAR(50),
+//     roleid INTEGER, 
+//     uid INTEGER, 
+//     pid INTEGER,
+//     FOREIGN KEY (roleid) REFERENCES ${role_table}(roleid),
+//     FOREIGN KEY (uid) REFERENCES ${user_table}(uid),
+//     FOREIGN KEY (pid) REFERENCES ${project_table}(pid)
+//     )`
 
-connection.query(sql,(err,res)=>{
-    if(err) throw (err);
-    console.log(`Table found: ${table_name}`)
-})
+// connection.query(sql,(err,res)=>{
+//     if(err) throw (err);
+//     console.log(`Table found: ${table_name}`)
+// })
 
 
 //CRUD Operations

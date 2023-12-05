@@ -1,11 +1,13 @@
 const db = require('./database');
+const table_name = 'user'
+let sql;
 
-//create table for user
-sql = `CREATE TABLE IF NOT EXISTS user (uid INTEGER PRIMARY KEY AUTO_INCREMENT, username CHAR(50) UNIQUE, email CHAR(50) UNIQUE, password CHAR(50))`
-db.connection.query(sql,(error,result)=>{
-	if(error) throw error;
-	console.log(`table created: user`)
-})
+// //create table for user
+// sql = `CREATE TABLE IF NOT EXISTS ${table_name} (uid INTEGER PRIMARY KEY AUTO_INCREMENT, username CHAR(50) UNIQUE, email CHAR(50) UNIQUE, password CHAR(50))`
+// db.connection.query(sql,(error,result)=>{
+// 	if(error) throw error;
+// 	console.log(`table created: user`)
+// })
 
 // GET
 // getalluser

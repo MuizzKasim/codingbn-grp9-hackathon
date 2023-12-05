@@ -8,18 +8,19 @@ const project_table = "project_status";
 const member = "project_member";
 const task_table = "task";
 const role_table = "role";
+let sql;
 
-// create the table if it dosent exits
-sql = `create table if not exists project_status
-    (pid integer primary key, 
-    project_title varchar(255),
-    status ENUM ('complete','pending','cancel') DEFAULT 'pending', 
-    project_leader integer, 
-    foreign key (project_leader) references user(uid))`;
-db.connection.query(sql, (error, result) => {
-    if(error) throw error;
-    console.log(`Table found: `)
-})
+// // create the table if it dosent exits
+// sql = `create table if not exists ${project_table}
+//     (pid integer primary key, 
+//     project_title varchar(255),
+//     status ENUM ('complete','pending','cancel') DEFAULT 'pending', 
+//     project_leader integer, 
+//     foreign key (project_leader) references user(uid))`;
+// db.connection.query(sql, (error, result) => {
+//     if(error) throw error;
+//     console.log(`Table found: ${project_table}`)
+// })
 
 //get whole project table
 async function projectGet(){

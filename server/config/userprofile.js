@@ -1,11 +1,13 @@
 const db = require('./database');
+const table_name ='user_profile';
+let sql;
 
-//create table for user profile
-sql = `CREATE TABLE IF NOT EXISTS user_profile (uid INTEGER, position CHAR(50), roleid INTEGER, profile BLOB, github VARCHAR(255), constraint fk_uid FOREIGN KEY (uid) REFERENCES user (uid), constraint fk_roleid FOREIGN KEY (roleid) REFERENCES role (roleid))`
-db.connection.query(sql,(error,result)=>{
-	if(error) throw error;
-	console.log(`table created: user_profile`)
-})
+// //create table for user profile
+// sql = `CREATE TABLE IF NOT EXISTS ${table_name} (uid INTEGER, position CHAR(50), roleid INTEGER, profile BLOB, github VARCHAR(255), constraint fk_uid FOREIGN KEY (uid) REFERENCES user (uid), constraint fk_roleid FOREIGN KEY (roleid) REFERENCES role (roleid))`
+// db.connection.query(sql,(error,result)=>{
+// 	if(error) throw error;
+// 	console.log(`table created: user_profile`)
+// })
 
 
 // GET

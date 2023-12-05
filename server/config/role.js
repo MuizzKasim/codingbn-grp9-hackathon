@@ -1,11 +1,13 @@
 const db = require('./database')
+const table_name = 'role'
+let sql;
 
-//create table for role
-sql = `CREATE TABLE IF NOT EXISTS role (roleid INTEGER PRIMARY KEY AUTO_INCREMENT, role_name CHAR(50) UNIQUE)`
-db.connection.query(sql,(error,result)=>{
-	if(error) throw error;
-	console.log(`table created: role`)
-})
+// //create table for role
+// sql = `CREATE TABLE IF NOT EXISTS ${table_name} (roleid INTEGER PRIMARY KEY AUTO_INCREMENT, role_name CHAR(50) UNIQUE)`
+// db.connection.query(sql,(error,result)=>{
+// 	if(error) throw error;
+// 	console.log(`table created: role`)
+// })
 
 // get all role
 async function getAllRole() {

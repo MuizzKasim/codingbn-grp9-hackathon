@@ -5,18 +5,18 @@ const table_name='comment'
 const connection = db.connection;
 let sql;
 
-//Create table - if not exists
-sql = `CREATE TABLE IF NOT EXISTS ${table_name} (
-    commenter_uid INTEGER,
-    content VARCHAR(100),
-    date DATETIME,
-    cid INTEGER PRIMARY KEY AUTO_INCREMENT
-    )`
+// //Create table - if not exists
+// sql = `CREATE TABLE IF NOT EXISTS ${table_name} (
+//     commenter_uid INTEGER,
+//     content VARCHAR(100),
+//     date DATETIME,
+//     cid INTEGER PRIMARY KEY AUTO_INCREMENT
+//     )`
 
-connection.query(sql,(err,res)=>{
-    if(err) throw err;
-    console.log(`Table found: ${table_name}`)
-})
+// connection.query(sql,(err,res)=>{
+//     if(err) throw err;
+//     console.log(`Table found: ${table_name}`)
+// })
 
 //CRUD Operations
 //Create

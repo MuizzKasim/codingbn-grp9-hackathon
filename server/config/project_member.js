@@ -8,8 +8,13 @@ const project_table = "project_status";
 const member = "project_member";
 const task_table = "task";
 const role_table = "role";
+let sql;
 
-
+// sql = `CREATE TABLE IF NOT EXISTS project_member(mid INTEGER PRIMARY KEY AUTO_INCREMENT,uid INTEGER,pid INTEGER);`;
+// db.connection.query(sql,(error,result)=>{
+// 	if(error) throw error;
+// 	console.log(`table project_member was created`)
+// })
 
 //get all member
 async function memberGet(){

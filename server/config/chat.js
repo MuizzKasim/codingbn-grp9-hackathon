@@ -10,21 +10,22 @@ const task_table = "task";
 const role_table = "role";
 const chat_table = "chat";
 const table_name = "chat";
+let sql;
 
-//Create table - if not exists
-sql = `CREATE TABLE IF NOT EXISTS ${table_name} (
-    receiver_uid INTEGER,
-    sender_uid INTEGER,
-    content VARCHAR(100),
-    chat_order INTEGER PRIMARY KEY AUTO_INCREMENT,
-    FOREIGN KEY (receiver_uid) REFERENCES ${user_table}(uid),
-    FOREIGN KEY (sender_uid) REFERENCES ${user_table}(uid)
-    )`
+// //Create table - if not exists
+// sql = `CREATE TABLE IF NOT EXISTS ${table_name} (
+//     receiver_uid INTEGER,
+//     sender_uid INTEGER,
+//     content VARCHAR(100),
+//     chat_order INTEGER PRIMARY KEY AUTO_INCREMENT,
+//     FOREIGN KEY (receiver_uid) REFERENCES ${user_table}(uid),
+//     FOREIGN KEY (sender_uid) REFERENCES ${user_table}(uid)
+//     )`
 
-db.connection.query(sql,(err,res)=>{
-    if(err) throw err;
-    console.log(`Table found: ${table_name}`)
-})
+// db.connection.query(sql,(err,res)=>{
+//     if(err) throw err;
+//     console.log(`Table found: ${table_name}`)
+// })
 
 //Create
 async function createNewChat(body){
